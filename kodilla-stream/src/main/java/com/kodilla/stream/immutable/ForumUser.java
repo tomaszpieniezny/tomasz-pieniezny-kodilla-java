@@ -13,7 +13,7 @@ public final class ForumUser {
         return realName;
     }
 
-    public ForumUser(String username, String realName) {
+    public ForumUser(final String username, final String realName) {
         this.username = username;
         this.realName = realName;
     }
