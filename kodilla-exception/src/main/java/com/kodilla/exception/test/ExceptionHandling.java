@@ -7,7 +7,7 @@ public class ExceptionHandling {
         try{
 
             secondChallenge.probablyIWillThrowException(2.0, 1.0);
-git
+
         } catch (Exception e){
 
             System.out.println("Something went wrong!");
