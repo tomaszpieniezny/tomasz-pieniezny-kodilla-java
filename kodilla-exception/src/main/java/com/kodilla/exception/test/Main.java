@@ -2,7 +2,7 @@ package com.kodilla.exception.test;
 
 public class Main {
     public static void main(String[] args) {
-        Flight flight1 = new Flight("Warszawa", "Wrocław");
+        Flight flight1 = new Flight("Warszawa", "Warszawa");
         Flight flight2 = new Flight("Poznań", "Gdańsk");
         FlightLogic flightLogic = new FlightLogic();
 
