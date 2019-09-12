@@ -1,4 +1,4 @@
-package Food2Door;
+package com.kodilla.good.patterns.challenges.Food2Door;
 
 import java.util.ArrayList;
 import java.util.HashMap;

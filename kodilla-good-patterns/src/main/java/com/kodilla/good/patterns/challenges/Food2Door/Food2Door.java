@@ -1,4 +1,4 @@
-package Food2Door;
+package com.kodilla.good.patterns.challenges.Food2Door;
 
 public class Food2Door {
     public static void main(String[] args) {

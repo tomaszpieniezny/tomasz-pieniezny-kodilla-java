@@ -1,4 +1,4 @@
-package Food2Door;
+package com.kodilla.good.patterns.challenges.Food2Door;
 public class GlutenFreeProduct extends Product {
     private String productDescription;
 
