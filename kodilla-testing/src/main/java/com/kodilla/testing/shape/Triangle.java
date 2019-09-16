@@ -8,13 +8,14 @@ public class Triangle implements Shape {
         this.h = h;
         this.a = a;
     }
+
     @Override
-    public String getShapeName(){
+    public String getShapeName() {
         return "Triangle";
     }
 
     @Override
     public double getField() {
-        return a*h/2;
+        return a * h / 2;
     }
 }

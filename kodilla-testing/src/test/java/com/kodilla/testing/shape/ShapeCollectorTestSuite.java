@@ -37,8 +37,8 @@ public class ShapeCollectorTestSuite {
     public void testShowFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        shapeCollector.addFigure(new Triangle(2,3));
-        shapeCollector.addFigure(new Triangle(3,4));
+        shapeCollector.addFigure(new Triangle(2, 3));
+        shapeCollector.addFigure(new Triangle(3, 4));
 
         //When
         String wynik = shapeCollector.showFigures();

@@ -6,13 +6,14 @@ public class Circle implements Shape {
     public Circle(double r) {
         this.r = r;
     }
+
     @Override
-    public String getShapeName(){
+    public String getShapeName() {
         return "Circle";
     }
 
     @Override
     public double getField() {
-        return 3.14*r*r;
+        return 3.14 * r * r;
     }
 }

@@ -12,20 +12,20 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class CalculatorTestSuite {
     @Test
-    public void testCalculations(){
+    public void testCalculations() {
         //Given
         ApplicationContext context =
                 new AnnotationConfigApplicationContext("com.kodilla.spring");
-                Calculator calculator = context.getBean(Calculator.class);
+        Calculator calculator = context.getBean(Calculator.class);
         //When
-        double resultAdd = calculator.add(2,2);
-        double resultSub = calculator.sub(2,2);
-        double resultMul = calculator.mul(2,2);
-        double resultDiv = calculator.div(2,2);
+        double resultAdd = calculator.add(2, 2);
+        double resultSub = calculator.sub(2, 2);
+        double resultMul = calculator.mul(2, 2);
+        double resultDiv = calculator.div(2, 2);
         //Then
-        Assert.assertEquals(4,resultAdd,1);
-        Assert.assertEquals(0,resultSub,1);
-        Assert.assertEquals(4,resultMul,1);
-        Assert.assertEquals(1,resultDiv,1);
+        Assert.assertEquals(4, resultAdd, 1);
+        Assert.assertEquals(0, resultSub, 1);
+        Assert.assertEquals(4, resultMul, 1);
+        Assert.assertEquals(1, resultDiv, 1);
     }
 }

@@ -34,8 +34,8 @@ public class StreamMain {
         PoemBeautifier poemBeautifier = new PoemBeautifier();
         poemBeautifier.beautify("ABC", text -> text + " jakis tekst");
         poemBeautifier.beautify("ABC", text -> text.toLowerCase() + " jakis tekst");
-        poemBeautifier.beautify("Cos tam napisane", text -> text.substring(4,8));
-        poemBeautifier.beautify("eemmeemmm", text -> text.replace("m","S"));
+        poemBeautifier.beautify("Cos tam napisane", text -> text.substring(4, 8));
+        poemBeautifier.beautify("eemmeemmm", text -> text.replace("m", "S"));
 
         System.out.println("\nUsing Stream to generate even numbers from 1 to 20");
         NumbersGenerator.generateEven(20);
@@ -99,7 +99,7 @@ public class StreamMain {
         String theResultStringOfBooks = theBookDirectory4.getList().stream()
                 .filter(book -> book.getYearOfPublication() > 2005)
                 .map(Book::toString)
-                .collect(Collectors.joining(",\n","<<",">>"));
+                .collect(Collectors.joining(",\n", "<<", ">>"));
 
         System.out.println(theResultStringOfBooks);
 
@@ -110,7 +110,7 @@ public class StreamMain {
                 .filter(ForumUser -> ForumUser.getPostCount() > 0)
                 .filter(ForumUser -> ForumUser.getBirthdate().getYear() < 1999)
                 .filter(ForumUser -> ForumUser.getSex() == 'M')
-                .collect(Collectors.toMap(ForumUser::getID,ForumUser -> ForumUser));
+                .collect(Collectors.toMap(ForumUser::getID, ForumUser -> ForumUser));
 
         System.out.println("# elements: " + theResultMapOfForumUser.size());
         theResultMapOfForumUser.entrySet().stream()

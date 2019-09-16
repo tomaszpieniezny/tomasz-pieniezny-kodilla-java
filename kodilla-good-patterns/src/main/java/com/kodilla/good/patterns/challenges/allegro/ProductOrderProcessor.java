@@ -13,17 +13,17 @@ public class ProductOrderProcessor {
         this.productOrderRepository = productOrderRepository;
     }
 
-    public ProductOrderDTO process(ProductOrderRequest productOrderRequest){
+    public ProductOrderDTO process(ProductOrderRequest productOrderRequest) {
         boolean isSuccessfullySold = productOrderService.sold(productOrderRequest.getProduct(),
-                                                                productOrderRequest.getUser(),
-                                                                productOrderRequest.getQuantity(),
-                                                                productOrderRequest.getOrderDate());
-        if (isSuccessfullySold){
+                productOrderRequest.getUser(),
+                productOrderRequest.getQuantity(),
+                productOrderRequest.getOrderDate());
+        if (isSuccessfullySold) {
             informationService.information(productOrderRequest.getUser());
             productOrderRepository.createProductOrder(productOrderRequest.getProduct(),
-                                                        productOrderRequest.getUser(),
-                                                        productOrderRequest.getQuantity(),
-                                                        productOrderRequest.getOrderDate());
+                    productOrderRequest.getUser(),
+                    productOrderRequest.getQuantity(),
+                    productOrderRequest.getOrderDate());
         } else {
             System.out.println("Error! Please try again later.");
         }
@@ -32,6 +32,6 @@ public class ProductOrderProcessor {
                 productOrderRequest.getOrderDate(),
                 productOrderRequest.getQuantity(),
                 isSuccessfullySold);
-        }
+    }
 }
 

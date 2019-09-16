@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class BoardTestSuite {
 
     @Test
-    public void testShowBoard(){
+    public void testShowBoard() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext(BoardConfig.class);
         Board board = context.getBean(Board.class);
@@ -23,7 +23,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    public void testAddOneTask(){
+    public void testAddOneTask() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext(BoardConfig.class);
         Board board = context.getBean(Board.class);
@@ -34,6 +34,6 @@ public class BoardTestSuite {
         //Then
         Assert.assertEquals("Test getToDoList", board.getToDoList().getTasks().get(0));
         Assert.assertEquals("Test getInProgressList", board.getInProgressList().getTasks().get(0));
-        Assert.assertEquals("Test getDoneList",board.getDoneList().getTasks().get(0));
+        Assert.assertEquals("Test getDoneList", board.getDoneList().getTasks().get(0));
     }
 }

@@ -9,6 +9,7 @@ public class ForumUser {
     public ForumUser() {
         username = "John Smith";
     }
+
     public String getUsername() {
         return username;
     }

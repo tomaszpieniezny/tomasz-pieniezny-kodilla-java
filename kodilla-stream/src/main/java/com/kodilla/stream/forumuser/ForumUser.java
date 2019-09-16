@@ -14,7 +14,8 @@ public final class ForumUser {
         this.ID = ID;
         this.userName = userName;
         this.sex = sex;
-        this.birthDate = LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth);;
+        this.birthDate = LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth);
+        ;
         this.postCount = postCount;
     }
 

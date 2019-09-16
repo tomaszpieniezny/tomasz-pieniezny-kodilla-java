@@ -136,9 +136,10 @@ public class BoardTestSuite {
         //Then
         Assert.assertEquals(2, longTasks);
     }
+
     // Zadanie 7.6
     @Test
-    public void testAddTaskListAverageWorkingOnTask(){
+    public void testAddTaskListAverageWorkingOnTask() {
         //Given
         Board project = prepareTestData();
 
@@ -148,10 +149,10 @@ public class BoardTestSuite {
         double average = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(t -> t.getTasks().stream())
-                .mapToDouble(t ->LocalDate.now().getDayOfYear() - t.getCreated().getDayOfYear())
+                .mapToDouble(t -> LocalDate.now().getDayOfYear() - t.getCreated().getDayOfYear())
                 .average().getAsDouble();
 
         //Then
-        Assert.assertEquals(10,average,0.01);
+        Assert.assertEquals(10, average, 0.01);
     }
 }

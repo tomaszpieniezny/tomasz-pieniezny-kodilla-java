@@ -6,7 +6,7 @@ import java.util.Random;
 public class CarOrderRepository implements ProductOrderRepository {
 
     @Override
-    public boolean createProductOrder(Product product, User user, int quantity, LocalDateTime orderDate){
+    public boolean createProductOrder(Product product, User user, int quantity, LocalDateTime orderDate) {
         return new Random().nextBoolean();
     }
 }

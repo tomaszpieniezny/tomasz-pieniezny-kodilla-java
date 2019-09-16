@@ -9,6 +9,7 @@ public class ShapeCollector {
     public void addFigure(Shape shape) {
         shapes.add(shape);
     }
+
     public boolean removeFigure(Shape shape) {
         boolean result = false;
         if (shapes.contains(shape)) {
@@ -18,18 +19,19 @@ public class ShapeCollector {
         return result;
     }
 
-    public Shape getFigure(int n){
+    public Shape getFigure(int n) {
         return shapes.get(n);
     }
 
-    public String showFigures(){
+    public String showFigures() {
         String wynik = "";
-        for(Shape show :shapes) {
+        for (Shape show : shapes) {
             wynik += show.getShapeName();
         }
         return wynik;
     }
-    public int sizeFigures(){
+
+    public int sizeFigures() {
 
         return shapes.size();
     }

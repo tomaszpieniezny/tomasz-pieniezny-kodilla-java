@@ -1,4 +1,5 @@
 package com.kodilla.testing.collection;
+
 import com.kodilla.testing.collection.OddNumbersExterminator;
 import org.junit.After;
 import org.junit.Assert;
@@ -24,7 +25,7 @@ public class CollectionTestSuite {
         //When
         ArrayList<Integer> result = oddNumbersExterminator.exterminate(numbers);
         //Then
-        Assert.assertEquals(result,evenNumbers);
+        Assert.assertEquals(result, evenNumbers);
     }
 
     @Test
@@ -39,7 +40,7 @@ public class CollectionTestSuite {
     }
 
     @Before
-    public void before(){
+    public void before() {
         System.out.println("Test Case: begin");
     }
 

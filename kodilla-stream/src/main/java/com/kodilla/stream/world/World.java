@@ -5,7 +5,7 @@ import java.util.List;
 import java.math.BigDecimal;
 
 public class World {
-    private List <Continent> continentList = new ArrayList<>();
+    private List<Continent> continentList = new ArrayList<>();
 
     public BigDecimal getPeopleQuantity(Continent continent) {
         return continentList.stream()

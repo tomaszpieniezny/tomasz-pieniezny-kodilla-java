@@ -23,9 +23,9 @@ public class ExtraFoodShop implements ProcessFood2Door {
     }
 
     @Override
-    public boolean process(Customer customer, Map<Product, Integer>productsOrders) {
+    public boolean process(Customer customer, Map<Product, Integer> productsOrders) {
 
-        for (Map.Entry<Product, Integer> entry : productsOrders.entrySet()){
+        for (Map.Entry<Product, Integer> entry : productsOrders.entrySet()) {
             Optional<Integer> productQty = Optional.ofNullable(productsList.get(entry.getKey()));
             if (productQty.orElse(0) < entry.getValue()) {
                 System.out.println("Extra Food Shop: We're sorry. Product is unavailable.");

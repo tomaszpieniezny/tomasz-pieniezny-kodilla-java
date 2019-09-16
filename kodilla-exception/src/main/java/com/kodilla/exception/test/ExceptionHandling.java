@@ -4,11 +4,11 @@ public class ExceptionHandling {
     public static void main(String args[]) {
         SecondChallenge secondChallenge = new SecondChallenge();
 
-        try{
+        try {
 
             secondChallenge.probablyIWillThrowException(2.0, 1.0);
 
-        } catch (Exception e){
+        } catch (Exception e) {
 
             System.out.println("Something went wrong!");
 
