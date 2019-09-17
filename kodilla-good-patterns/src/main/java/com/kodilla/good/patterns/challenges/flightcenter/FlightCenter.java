@@ -21,15 +21,11 @@ public class FlightCenter {
         Airport london = new Airport("Londyn");
         Airport paris = new Airport("Paryz");
 
-        airportsMap.put(wroclaw, Arrays.asList(berlin, poznan, london, london, krakow));
+        airportsMap.put(wroclaw, Arrays.asList(warsaw, poznan, berlin, gdansk, krakow));
         airportsMap.put(gdansk, Arrays.asList(poznan, krakow));
         airportsMap.put(krakow, Arrays.asList(wroclaw, berlin, gdansk));
         airportsMap.put(warsaw, Arrays.asList(berlin, london, gdansk));
-        airportsMap.put(london, Arrays.asList(gdansk));
         airportsMap.put(london, Arrays.asList(paris));
-        airportsMap.put(london, Arrays.asList(wroclaw));
-        airportsMap.put(krakow, Arrays.asList(wroclaw, gdansk));
-        airportsMap.put(krakow, Arrays.asList(gdansk, wroclaw));
         return airportsMap;
     }
 
