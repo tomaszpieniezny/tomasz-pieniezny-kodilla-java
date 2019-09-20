@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class LoggerArrayList {
     private static LoggerArrayList loggerInstance = null;
-    private ArrayList<String> lastLog = null;
+    private ArrayList<String> lastLog = new ArrayList<>();
 
     private LoggerArrayList(){
     }
