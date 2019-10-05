@@ -4,9 +4,18 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'kodilla-spring-web'
-include 'kodilla-patterns'
-include 'kodilla-jdbc'
+rootProject.name = 'kodilla-course'
+include 'kodilla-exception'
+include 'kodilla-good-patterns'
 include 'kodilla-hibernate'
-include 'kodilla-hibernate2'
+include 'kodilla-jdbc'
+include 'kodilla-patterns'
+include 'kodilla-spring'
+include 'kodilla-spring-intro'
+include 'kodilla-spring-web'
+include 'kodilla-stream'
+include 'kodilla-testing'
+
+
+
 
