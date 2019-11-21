@@ -1,14 +1,22 @@
 package com.kodilla.hibernate.manytomany;
 
+import com.kodilla.hibernate.manytomany.Company;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(
-        name = "Employee.lastNameSearch",
-        query = "FROM Employee WHERE lastname = :LASTNAME"
-)
+@NamedQueries({
+        @NamedQuery(
+                name = "Employee.findByLastname",
+                query = "FROM Employee WHERE lastname = :LASTNAME"
+        ),
+        @NamedQuery(
+                name = "Employee.findByFewLetters",
+                query = "FROM Employee WHERE lastname LIKE :ARG"
+        )
+})
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
@@ -57,6 +65,7 @@ public class Employee {
         this.lastname = lastname;
     }
 
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "JOIN_COMPANY_EMPLOYEE",
@@ -67,7 +76,7 @@ public class Employee {
         return companies;
     }
 
-    private void setCompanies(List<Company> companies) {
+    public void setCompanies(List<Company> companies) {
         this.companies = companies;
     }
 }

@@ -6,10 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedNativeQuery(
-        name = "Company.retrieveCompaniesWithFirstThreeLettersGRE",
+        name = "Company.findByThreeCharsPrefix",
         query = "SELECT * FROM COMPANIES" +
-                " WHERE SUBSTRING(COMPANY_NAME, 1, 3) = 'Gre'",
+                " WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :PREFIX",
         resultClass = Company.class
+)
+@NamedQuery(
+        name = "Company.findByFewLetters",
+        query = "FROM Company WHERE name LIKE :ARG"
 )
 @Entity
 @Table(name = "COMPANIES")
@@ -52,7 +56,7 @@ public class Company {
         return employees;
     }
 
-    private void setEmployees(List<Employee> employees) {
+    public void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
 }
