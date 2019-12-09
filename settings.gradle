@@ -15,7 +15,5 @@ include 'kodilla-spring-intro'
 include 'kodilla-spring-web'
 include 'kodilla-stream'
 include 'kodilla-testing'
-
-
-
+include 'kodilla-testing2'
 
